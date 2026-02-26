@@ -1,0 +1,51 @@
+/* ── Design tokens ──────────────────────────────────────────── */
+:root {
+  --font-sans: var(--font-sans, -apple-system, BlinkMacSystemFont, sans-serif);
+  --font-mono: var(--font-mono, "SF Mono", "Fira Code", monospace);
+
+  /* Light mode */
+  --bg:       #ffffff;
+  --fg:       #111111;
+  --muted:    #888888;
+  --border:   #e5e5e5;
+  --hover-bg: #f7f7f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:       #0a0a0a;
+    --fg:       #ededed;
+    --muted:    #666666;
+    --border:   #222222;
+    --hover-bg: #111111;
+  }
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+  background:  var(--bg);
+  color:       var(--fg);
+  font-family: var(--font-sans);
+  font-size:   16px;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a { color: inherit; }
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
