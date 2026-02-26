@@ -1,0 +1,48 @@
+.zone {
+  border: 1px dashed var(--border);
+  padding: 56px 40px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  user-select: none;
+  text-align: center;
+}
+
+.zone:hover {
+  border-color: var(--fg);
+  background: var(--hover-bg);
+}
+
+.over {
+  border-color: var(--fg);
+  border-style: solid;
+  background: var(--hover-bg);
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.primary {
+  font-size: 0.9rem;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.secondary {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
